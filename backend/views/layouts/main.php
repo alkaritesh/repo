@@ -268,10 +268,10 @@ AppAsset::register($this);
                         <a href="#"><i class="glyphicon glyphicon-cog"></i> Settings<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <?=Html::a('Add Institution Details',['/institution'])?>
+                                <?=Html::a('Add Institution Details',['/instution-details'])?>
                             </li>
                             <li>
-                                <?=Html::a('Add Academic Details',['/institution'])?>
+                                <?=Html::a('Add Session Details',['/session'])?>
                             </li>
                             <li>
                                 <?=Html::a('Student Import',['/institution'])?>
@@ -670,7 +670,7 @@ AppAsset::register($this);
 <!--        sidebar ends here-->
 
 <!--Navigation ends here-->
-    <div id="page-wrapper">
+    <div id="page-wrapper" style="padding:0;">
 <!--  content starts here  -->
 
         <?= Alert::widget() ?>

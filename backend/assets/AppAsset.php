@@ -22,6 +22,7 @@ class AppAsset extends AssetBundle
         'bower_components/metisMenu/dist/metisMenu.min.css',
         'dist/css/timeline.css',
         'dist/css/sb-admin-2.css',
+        'css/my.css',
         'bower_components/font-awesome/css/font-awesome.min.css'
 
     ];
