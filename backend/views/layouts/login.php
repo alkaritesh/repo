@@ -3,11 +3,11 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use backend\assets\LoginAsset;
+use backend\assets\AppAsset;
 use yii\helpers\Html;
 use common\widgets\Alert;
 
-LoginAsset::register($this);
+AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -19,13 +19,32 @@ LoginAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body>
+<body class="sidebar-mini layout-boxed skin-yellow-light">
 <?php $this->beginBody() ?>
 
 <div class="container">
 
-    <div class="row">
-        <div class="col-md-4 col-md-offset-4">
+    <header class="main-header">
+
+        <!-- Logo -->
+        <a href="index.php?r" class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini"><b>S</b>ERP</span>
+            <!-- logo for regular state and mobile devices -->
+            <span class="logo-lg"><b>School</b>ERP</span>
+        </a>
+
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+            <!-- Sidebar toggle button-->
+
+            <!-- Navbar Right Menu -->
+
+
+        </nav>
+    </header>
+    <div class="content-wrapper" style="margin-left: 0px;">
+        <div class="col-md-4 col-md-offset-4" style="margin-top: 10%;">
 
 
         <?= Alert::widget() ?>
@@ -33,7 +52,13 @@ LoginAsset::register($this);
 
 
         </div>
-    </div>
+     </div>
+    <footer class="main-footer" style="margin-left: 0px;">
+        <div class="pull-right hidden-xs">
+            <b>Version</b> 2.3.0
+        </div>
+        <strong>Copyright &copy; 2016-2017 <a href="http://google.com/+riteshsingh1">Ritesh Singh</a>.</strong> All rights reserved.
+    </footer>
 
 
 
@@ -42,13 +67,6 @@ LoginAsset::register($this);
 
 </div>
 
-<footer class="footer" style="margin-top: 16%;">
-    <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
-    </div>
-</footer>
 
 <?php $this->endBody() ?>
 </body>

@@ -18,20 +18,16 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'bower_components/bootstrap/dist/css/bootstrap.min.css',
-        'bower_components/metisMenu/dist/metisMenu.min.css',
-        'dist/css/timeline.css',
-        'dist/css/sb-admin-2.css',
-        'css/my.css',
-        'bower_components/font-awesome/css/font-awesome.min.css'
-
+       // 'bootstrap/css/bootstrap.min.css',
+        'dist/css/AdminLTE.min.css',
+        'dist/css/skins/_all-skins.min.css',
+        'font-awesome/css/font-awesome.min.css',
+        'ionicons-2.0.1/css/ionicons.min.css'
     ];
     public $js = [
-       // 'bower_components/jquery/dist/jquery.min.js',
-       'bower_components/bootstrap/dist/js/bootstrap.min.js',
-        'bower_components/metisMenu/dist/metisMenu.min.js',
-        'bower_components/raphael/raphael-min.js',
-        'dist/js/sb-admin-2.js'
+       // 'bootstrap/js/bootstrap.min.js',
+        'dist/js/app.min.js',
+
     ];
     public $depends = [
         'yii\web\YiiAsset',

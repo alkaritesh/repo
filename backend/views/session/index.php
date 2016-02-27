@@ -16,12 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
 CrudAsset::register($this);
 
 ?>
-<div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">Add Session Details</h1>
-    </div>
-    <!-- /.col-lg-12 -->
-</div>
+
 <div class="session-index">
     <div id="ajaxCrudDatatable">
         <?=GridView::widget([
@@ -44,7 +39,7 @@ CrudAsset::register($this);
             'condensed' => true,
             'responsive' => true,          
             'panel' => [
-                'type' => 'primary', 
+                'type' => 'success',
                 'heading' => '<i class="glyphicon glyphicon-list"></i> Sessions listing',
                 'before'=>'<em>* Resize table columns just like a spreadsheet by dragging the column edges.</em>',
                 'after'=>BulkButtonWidget::widget([
