@@ -334,12 +334,7 @@ AppAsset::register($this);
                         <li>
                             <?=Html::a('<i class="fa fa-circle-o"></i>Privileges',['/institution'])?>
                         </li>
-                        <li>
-                            <?=Html::a('<i class="fa fa-circle-o"></i>Assign Courses',['/institution'])?>
-                        </li>
-                        <li>
-                            <?=Html::a('<i class="fa fa-circle-o"></i>Users',['/institution'])?>
-                        </li>
+
                         <li>
                             <?=Html::a('<i class="fa fa-circle-o"></i>Enquiries',['/institution'])?>
                         </li>

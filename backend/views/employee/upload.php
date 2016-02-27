@@ -12,6 +12,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 $this->title="Upload Multiple Agencies";
 $this->params['breadcrumbs'][] = $this->title;
+$this->registerJsFile('@web/bootstrap/js/bootstrap.min.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
 ?>
 <?php echo FileInput::widget([
     'name'=>'file[]',
