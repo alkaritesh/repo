@@ -235,14 +235,14 @@ AppAsset::register($this);
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                            <span class="hidden-xs">Ritesh Singh</span>
+                            <span class="hidden-xs">Administrator</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
                                 <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                                 <p>
-                                    Ritesh Singh-Software Developer
+                                    Administrator-Software Developer
                                     <small>Member since Nov. 2012</small>
                                 </p>
                             </li>
@@ -289,7 +289,7 @@ AppAsset::register($this);
                     <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>Ritesh Singh</p>
+                    <p>Administrator</p>
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
             </div>
@@ -306,7 +306,7 @@ AppAsset::register($this);
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
                 <li class="header">MAIN NAVIGATION</li>
-                <li class="active treeview">
+                <li>
                     <a href="index.php?r">
                         <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                     </a>
@@ -316,7 +316,7 @@ AppAsset::register($this);
                     <a href="#">
                         <i class="fa fa-cog"></i>
                         <span>Settings</span>
-                        <span class="label label-primary pull-right">8</span>
+                        <span class="label label-primary pull-right">6</span>
                     </a>
                     <ul class="treeview-menu">
                         <li>
@@ -334,7 +334,6 @@ AppAsset::register($this);
                         <li>
                             <?=Html::a('<i class="fa fa-circle-o"></i>Privileges',['/institution'])?>
                         </li>
-
                         <li>
                             <?=Html::a('<i class="fa fa-circle-o"></i>Enquiries',['/institution'])?>
                         </li>
@@ -348,16 +347,16 @@ AppAsset::register($this);
                     </a>
                     <ul class="treeview-menu">
                         <li>
-                            <a href="#"> Courses and batch<i class="fa fa-angle-left pull-right"></i></a>
+                            <a href="#"> Class And Section<i class="fa fa-angle-left pull-right"></i></a>
                             <ul class="treeview-menu">
                                 <li>
-                                    <?=Html::a('<i class="fa fa-circle-o"></i>Course',['/course'])?>
+                                    <?=Html::a('<i class="fa fa-circle-o"></i>Class',['/class-master'])?>
                                 </li>
                                 <li>
-                                    <?=Html::a('<i class="fa fa-circle-o"></i>Batch',['/course'])?>
+                                    <?=Html::a('<i class="fa fa-circle-o"></i>Section',['/section'])?>
                                 </li>
                                 <li>
-                                    <?=Html::a('<i class="fa fa-circle-o"></i>Class Teacher Allocation',['/course'])?>
+                                    <?=Html::a('<i class="fa fa-circle-o"></i>Class Teacher Allocation',['/'])?>
                                 </li>
 
                             </ul>
@@ -366,13 +365,13 @@ AppAsset::register($this);
                             <a href="#"> Subjects<i class="fa fa-angle-left pull-right"></i></a>
                             <ul class="treeview-menu">
                                 <li>
-                                    <?=Html::a('<i class="fa fa-circle-o"></i>Course',['/course'])?>
+                                    <?=Html::a('<i class="fa fa-circle-o"></i>Subject',['/subject'])?>
                                 </li>
                                 <li>
-                                    <?=Html::a('<i class="fa fa-circle-o"></i>Batch',['/course'])?>
+                                    <?=Html::a('<i class="fa fa-circle-o"></i>Subject Type',['/subject-type'])?>
                                 </li>
                                 <li>
-                                    <?=Html::a('<i class="fa fa-circle-o"></i>Class Teacher Allocation',['/course'])?>
+                                    <?=Html::a('<i class="fa fa-circle-o"></i>Class Subject Allocation',['/class-subject'])?>
                                 </li>
 
                             </ul>
@@ -381,14 +380,9 @@ AppAsset::register($this);
                             <a href="#"> Lession Planning<i class="fa fa-angle-left pull-right"></i></a>
                             <ul class="treeview-menu">
                                 <li>
-                                    <?=Html::a('<i class="fa fa-circle-o"></i>Course',['/course'])?>
+                                    <?=Html::a('<i class="fa fa-circle-o"></i>Lesson Planning',['/course'])?>
                                 </li>
-                                <li>
-                                    <?=Html::a('<i class="fa fa-circle-o"></i>Batch',['/course'])?>
-                                </li>
-                                <li>
-                                    <?=Html::a('<i class="fa fa-circle-o"></i>Class Teacher Allocation',['/course'])?>
-                                </li>
+
 
                             </ul>
                         </li>
@@ -574,7 +568,7 @@ AppAsset::register($this);
                             <?=Html::a('<i class="fa fa-circle-o"></i>Student Category',['/course'])?>
                         </li>
                         <li>
-                            <?=Html::a('<i class="fa fa-circle-o"></i>Student Admission',['/course'])?>
+                            <?=Html::a('<i class="fa fa-circle-o"></i>Student Admission',['/student'])?>
                         </li>
                         <li>
                             <?=Html::a('<i class="fa fa-circle-o"></i>Student List',['/course'])?>

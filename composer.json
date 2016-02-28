@@ -20,7 +20,8 @@
         "yiisoft/yii2-swiftmailer": "*",
         "johnitvn/yii2-ajaxcrud": "*",
         "2amigos/yii2-date-picker-widget" : "~1.0",
-        "kartik-v/yii2-widget-fileinput": "@dev"
+        "kartik-v/yii2-widget-fileinput": "@dev",
+        "kartik-v/yii2-widget-select2": "@dev"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
