@@ -11,7 +11,9 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'class_id')->textInput() ?>
+    <?= $form->field($model, 'class_id')->dropDownList(\yii\helpers\ArrayHelper::map(\backend\models\ClassMaster::find()->all(),'id','name')
+    ,['prompt'=>'Select Class']
+    ) ?>
 
     <?= $form->field($model, 'section_id')->textInput() ?>
 
