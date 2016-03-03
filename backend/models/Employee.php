@@ -15,6 +15,7 @@ use Yii;
  * @property integer $age
  * @property string $residence_address
  * @property string $permanent_address
+ * @property integer $designation
  */
 class Employee extends \yii\db\ActiveRecord
 {
@@ -32,10 +33,10 @@ class Employee extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'dob', 'gender', 'marital_status', 'age', 'residence_address', 'permanent_address'], 'required'],
+            [['name', 'dob', 'gender', 'marital_status', 'age', 'residence_address', 'permanent_address', 'designation'], 'required'],
             [['dob'], 'safe'],
             [['gender', 'marital_status', 'residence_address', 'permanent_address'], 'string'],
-            [['age'], 'integer'],
+            [['age', 'designation'], 'integer'],
             [['name'], 'string', 'max' => 200]
         ];
     }
@@ -54,6 +55,7 @@ class Employee extends \yii\db\ActiveRecord
             'age' => 'Age',
             'residence_address' => 'Residence Address',
             'permanent_address' => 'Permanent Address',
+            'designation' => 'Designation',
         ];
     }
 }

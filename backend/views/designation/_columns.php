@@ -19,34 +19,6 @@ return [
         'attribute'=>'name',
     ],
     [
-        'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'dob',
-    ],
-    [
-        'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'gender',
-    ],
-    [
-        'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'marital_status',
-    ],
-    [
-        'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'age',
-    ],
-    // [
-        // 'class'=>'\kartik\grid\DataColumn',
-        // 'attribute'=>'residence_address',
-    // ],
-    // [
-        // 'class'=>'\kartik\grid\DataColumn',
-        // 'attribute'=>'permanent_address',
-    // ],
-    // [
-        // 'class'=>'\kartik\grid\DataColumn',
-        // 'attribute'=>'designation',
-    // ],
-    [
         'class' => 'kartik\grid\ActionColumn',
         'dropdown' => false,
         'vAlign'=>'middle',

@@ -25,6 +25,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'permanent_address')->textarea(['rows' => 6]) ?>
 
+    <?= $form->field($model, 'designation')->textInput() ?>
+
   
 	<?php if (!Yii::$app->request->isAjax){ ?>
 	  	<div class="form-group">

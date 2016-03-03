@@ -18,6 +18,7 @@ use yii\widgets\DetailView;
             'age',
             'residence_address:ntext',
             'permanent_address:ntext',
+            'designation',
         ],
     ]) ?>
 

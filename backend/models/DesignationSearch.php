@@ -5,12 +5,12 @@ namespace backend\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\Employee;
+use backend\models\Designation;
 
 /**
- * EmployeeSearch represents the model behind the search form about `backend\models\Employee`.
+ * DesignationSearch represents the model behind the search form about `backend\models\Designation`.
  */
-class EmployeeSearch extends Employee
+class DesignationSearch extends Designation
 {
     /**
      * @inheritdoc
@@ -18,8 +18,8 @@ class EmployeeSearch extends Employee
     public function rules()
     {
         return [
-            [['id', 'age', 'designation'], 'integer'],
-            [['name', 'dob', 'gender', 'marital_status', 'residence_address', 'permanent_address'], 'safe'],
+            [['id'], 'integer'],
+            [['name'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class EmployeeSearch extends Employee
      */
     public function search($params)
     {
-        $query = Employee::find();
+        $query = Designation::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -57,16 +57,9 @@ class EmployeeSearch extends Employee
 
         $query->andFilterWhere([
             'id' => $this->id,
-            'dob' => $this->dob,
-            'age' => $this->age,
-            'designation' => $this->designation,
         ]);
 
-        $query->andFilterWhere(['like', 'name', $this->name])
-            ->andFilterWhere(['like', 'gender', $this->gender])
-            ->andFilterWhere(['like', 'marital_status', $this->marital_status])
-            ->andFilterWhere(['like', 'residence_address', $this->residence_address])
-            ->andFilterWhere(['like', 'permanent_address', $this->permanent_address]);
+        $query->andFilterWhere(['like', 'name', $this->name]);
 
         return $dataProvider;
     }

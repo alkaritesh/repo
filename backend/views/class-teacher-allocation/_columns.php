@@ -16,36 +16,20 @@ return [
     // ],
     [
         'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'name',
+        'attribute'=>'class_id',
     ],
     [
         'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'dob',
+        'attribute'=>'section_id',
     ],
     [
         'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'gender',
+        'attribute'=>'session_id',
     ],
     [
         'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'marital_status',
+        'attribute'=>'teacher_id',
     ],
-    [
-        'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'age',
-    ],
-    // [
-        // 'class'=>'\kartik\grid\DataColumn',
-        // 'attribute'=>'residence_address',
-    // ],
-    // [
-        // 'class'=>'\kartik\grid\DataColumn',
-        // 'attribute'=>'permanent_address',
-    // ],
-    // [
-        // 'class'=>'\kartik\grid\DataColumn',
-        // 'attribute'=>'designation',
-    // ],
     [
         'class' => 'kartik\grid\ActionColumn',
         'dropdown' => false,

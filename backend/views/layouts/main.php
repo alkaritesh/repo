@@ -356,7 +356,7 @@ AppAsset::register($this);
                                     <?=Html::a('<i class="fa fa-circle-o"></i>Section',['/section'])?>
                                 </li>
                                 <li>
-                                    <?=Html::a('<i class="fa fa-circle-o"></i>Class Teacher Allocation',['/'])?>
+                                    <?=Html::a('<i class="fa fa-circle-o"></i>Class Teacher Allocation',['/class-teacher-allocation'])?>
                                 </li>
 
                             </ul>
@@ -492,13 +492,13 @@ AppAsset::register($this);
                             <?=Html::a('<i class="fa fa-circle-o"></i>Add user type',['/course'])?>
                         </li>
                         <li>
-                            <?=Html::a('<i class="fa fa-circle-o"></i>add Employee',['/course'])?>
+                            <?=Html::a('<i class="fa fa-circle-o"></i>add Employee',['/employee'])?>
                         </li>
                         <li>
                             <?=Html::a('<i class="fa fa-circle-o"></i>Add department',['/course'])?>
                         </li>
                         <li>
-                            <?=Html::a('<i class="fa fa-circle-o"></i>Add Designation',['/course'])?>
+                            <?=Html::a('<i class="fa fa-circle-o"></i>Add Designation',['/designation'])?>
                         </li>
                         <li>
                             <?=Html::a('<i class="fa fa-circle-o"></i>Employee List',['/course'])?>

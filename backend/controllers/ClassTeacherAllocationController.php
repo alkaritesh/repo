@@ -3,8 +3,8 @@
 namespace backend\controllers;
 
 use Yii;
-use backend\models\Employee;
-use backend\models\EmployeeSearch;
+use backend\models\ClassTeacherAllocation;
+use backend\models\ClassTeacherAllocationSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -12,9 +12,9 @@ use \yii\web\Response;
 use yii\helpers\Html;
 
 /**
- * EmployeeController implements the CRUD actions for Employee model.
+ * ClassTeacherAllocationController implements the CRUD actions for ClassTeacherAllocation model.
  */
-class EmployeeController extends Controller
+class ClassTeacherAllocationController extends Controller
 {
     /**
      * @inheritdoc
@@ -33,12 +33,12 @@ class EmployeeController extends Controller
     }
 
     /**
-     * Lists all Employee models.
+     * Lists all ClassTeacherAllocation models.
      * @return mixed
      */
     public function actionIndex()
     {    
-        $searchModel = new EmployeeSearch();
+        $searchModel = new ClassTeacherAllocationSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -49,7 +49,7 @@ class EmployeeController extends Controller
 
 
     /**
-     * Displays a single Employee model.
+     * Displays a single ClassTeacherAllocation model.
      * @param integer $id
      * @return mixed
      */
@@ -59,7 +59,7 @@ class EmployeeController extends Controller
         if($request->isAjax){
             Yii::$app->response->format = Response::FORMAT_JSON;
             return [
-                    'title'=> "Employee #".$id,
+                    'title'=> "ClassTeacherAllocation #".$id,
                     'content'=>$this->renderAjax('view', [
                         'model' => $this->findModel($id),
                     ]),
@@ -74,7 +74,7 @@ class EmployeeController extends Controller
     }
 
     /**
-     * Creates a new Employee model.
+     * Creates a new ClassTeacherAllocation model.
      * For ajax request will return json object
      * and for non-ajax request if creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
@@ -82,7 +82,7 @@ class EmployeeController extends Controller
     public function actionCreate()
     {
         $request = Yii::$app->request;
-        $model = new Employee();  
+        $model = new ClassTeacherAllocation();  
 
         if($request->isAjax){
             /*
@@ -91,7 +91,7 @@ class EmployeeController extends Controller
             Yii::$app->response->format = Response::FORMAT_JSON;
             if($request->isGet){
                 return [
-                    'title'=> "Create new Employee",
+                    'title'=> "Create new ClassTeacherAllocation",
                     'content'=>$this->renderAjax('create', [
                         'model' => $model,
                     ]),
@@ -102,15 +102,15 @@ class EmployeeController extends Controller
             }else if($model->load($request->post()) && $model->save()){
                 return [
                     'forceReload'=>'#crud-datatable-pjax',
-                    'title'=> "Create new Employee",
-                    'content'=>'<span class="text-success">Create Employee success</span>',
+                    'title'=> "Create new ClassTeacherAllocation",
+                    'content'=>'<span class="text-success">Create ClassTeacherAllocation success</span>',
                     'footer'=> Html::button('Close',['class'=>'btn btn-default pull-left','data-dismiss'=>"modal"]).
                             Html::a('Create More',['create'],['class'=>'btn btn-primary','role'=>'modal-remote'])
         
                 ];         
             }else{           
                 return [
-                    'title'=> "Create new Employee",
+                    'title'=> "Create new ClassTeacherAllocation",
                     'content'=>$this->renderAjax('create', [
                         'model' => $model,
                     ]),
@@ -135,7 +135,7 @@ class EmployeeController extends Controller
     }
 
     /**
-     * Updates an existing Employee model.
+     * Updates an existing ClassTeacherAllocation model.
      * For ajax request will return json object
      * and for non-ajax request if update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
@@ -153,7 +153,7 @@ class EmployeeController extends Controller
             Yii::$app->response->format = Response::FORMAT_JSON;
             if($request->isGet){
                 return [
-                    'title'=> "Update Employee #".$id,
+                    'title'=> "Update ClassTeacherAllocation #".$id,
                     'content'=>$this->renderAjax('update', [
                         'model' => $model,
                     ]),
@@ -163,7 +163,7 @@ class EmployeeController extends Controller
             }else if($model->load($request->post()) && $model->save()){
                 return [
                     'forceReload'=>'#crud-datatable-pjax',
-                    'title'=> "Employee #".$id,
+                    'title'=> "ClassTeacherAllocation #".$id,
                     'content'=>$this->renderAjax('view', [
                         'model' => $model,
                     ]),
@@ -172,7 +172,7 @@ class EmployeeController extends Controller
                 ];    
             }else{
                  return [
-                    'title'=> "Update Employee #".$id,
+                    'title'=> "Update ClassTeacherAllocation #".$id,
                     'content'=>$this->renderAjax('update', [
                         'model' => $model,
                     ]),
@@ -195,7 +195,7 @@ class EmployeeController extends Controller
     }
 
     /**
-     * Delete an existing Employee model.
+     * Delete an existing ClassTeacherAllocation model.
      * For ajax request will return json object
      * and for non-ajax request if deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
@@ -223,7 +223,7 @@ class EmployeeController extends Controller
     }
 
      /**
-     * Delete multiple existing Employee model.
+     * Delete multiple existing ClassTeacherAllocation model.
      * For ajax request will return json object
      * and for non-ajax request if deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
@@ -254,15 +254,15 @@ class EmployeeController extends Controller
     }
 
     /**
-     * Finds the Employee model based on its primary key value.
+     * Finds the ClassTeacherAllocation model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Employee the loaded model
+     * @return ClassTeacherAllocation the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Employee::findOne($id)) !== null) {
+        if (($model = ClassTeacherAllocation::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
