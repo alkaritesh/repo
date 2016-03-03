@@ -47,4 +47,5 @@ class ClassTeacherAllocation extends \yii\db\ActiveRecord
             'teacher_id' => 'Teacher ID',
         ];
     }
+
 }
