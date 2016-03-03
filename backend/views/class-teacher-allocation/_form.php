@@ -12,14 +12,25 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'class_id')->dropDownList(\yii\helpers\ArrayHelper::map(\backend\models\ClassMaster::find()->all(),'id','name')
-    ,['prompt'=>'Select Class']
+    ,['prompt'=>'Select Class',
+      'onchange'=>'$.post( "index.php?r=section/lists&id='.'"+$(this).val(), function( data ){
+                                         $( "select#classteacherallocation-section_id" ).html( data );
+                                           });'
+
+        ]
     ) ?>
 
-    <?= $form->field($model, 'section_id')->textInput() ?>
+    <?= $form->field($model, 'section_id')->dropdownlist(\yii\helpers\ArrayHelper::map(
+        \backend\models\Section::find()->all(),'id','name'
+    ),['prompt'=>'Please Select Section']) ?>
 
-    <?= $form->field($model, 'session_id')->textInput() ?>
+    <?= $form->field($model, 'session_id')->dropDownList(\yii\helpers\ArrayHelper::map(
+        \backend\models\Session::find()->all(),'id','start_date'
+    ),['prompt'=>'Please Select Session']) ?>
 
-    <?= $form->field($model, 'teacher_id')->textInput() ?>
+    <?= $form->field($model, 'teacher_id')->dropDownList(\yii\helpers\ArrayHelper::map(
+        \backend\models\Employee::find()->all(),'id','name'
+    ),['prompt'=>'Please Select teacher']) ?>
 
   
 	<?php if (!Yii::$app->request->isAjax){ ?>
