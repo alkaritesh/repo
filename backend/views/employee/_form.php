@@ -13,7 +13,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'dob')->textInput() ?>
+    <?= $form->field($model, 'dob')->widget(\dosamigos\datepicker\DatePicker::className(),
+        [
+            'inline'=>false,
+            'clientOptions'=>[
+            'autoclose'=>true,
+            'format'=>'yyyy-mm-dd',
+        ]]) ?>
 
     <?= $form->field($model, 'gender')->dropDownList([ 'Male' => 'Male', 'Female' => 'Female', ], ['prompt' => '']) ?>
 
@@ -25,7 +31,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'permanent_address')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'designation')->textInput() ?>
+    <?= $form->field($model, 'designation')->dropDownList(\yii\helpers\ArrayHelper::map(
+        \backend\models\Designation::find()->all(),'id','name'
+    ),['prompt'=>'Please Select Designation']) ?>
 
   
 	<?php if (!Yii::$app->request->isAjax){ ?>
